@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="shortcut icon" href="Tree.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="Logo.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <title>About Us</title>
+</head>
+<body class=" bg-black">
+    <!-- Loading animation -->
+    <div x-data="{ showLoading: true }" x-init="setTimeout(() => showLoading = false, 500)"
+        class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-white bg-opacity-80 z-50"
+        x-show="showLoading">
+        <div class="flex justify-center animate-spin rounded-full h-20 w-20 border-t-2 border-b-2 border-green-500">
+        </div>
+        <img class="absolute h-14 w-14" style="animation: none;" src="Logo.png" alt="">
+    </div>
+    <!-- header section starts -->
+    <head>
+        <header>
+            <nav class="flex justify-between items-center w-full h-14 px-[1.2rem] bg-black">
+                <div class="text-2xl font-bold text-lime-600"><a class="flex justify-center items-center" href="index.html"><img class="mr-2 h-[5vh] w-[3vw]" src="Logo.png" alt=""><span class="text-3xl">Textile Truce</span></a></div>
+                    <ul class="flex justify-between items-center text-lime-600 font-semibold">
+                        <li class=" mx-[5px]">
+                            <div x-data="{ open: false }" class="relative">
+                                <button @click="open = !open" class="px-6 py-2 rounded">Services<i class="fa-solid fa-chevron-down text-sm ml-1"></i></button>
+                                <div x-show="open" class="absolute mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                                    <div class="mt-4 ring-white ring-1 py-1 absolute rounded bg-black filter z-10" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                                        <div class="flex justify-center"> 
+                                            <div class="px-4 py-2 text-sm text-white w-[15vw]" role="menuitem">
+                                                <a class=" font-bold text-green-700" href="User.html">For Individuals</a>
+                                                <div class=" w-[11rem] font-normal border-b border-green-700 mt-2 rounded-2xl mb-2"></div>
+                                                <div class="py-2 text-sm text-white font-medium" role="menuitem">
+                                                    Service 1
+                                                </div>
+                                                <div class="py-2 text-sm text-white font-medium" role="menuitem">
+                                                    Service 2
+                                                </div>
+                                                <div class="py-2 text-sm text-white font-medium" role="menuitem">
+                                                    Service 2
+                                                </div>
+    
+                                            </div>
+                                           
+                                            <div class="px-4 py-2 text-sm text-white w-[15vw]" role="menuitem">
+                                                <span class=" font-bold text-green-700">For Businesses</span>
+                                                <div class=" w-[11rem] font-normal border-b border-green-700 mt-2 rounded-2xl mb-2"></div>
+                                                <div class="py-2 text-sm text-white font-medium" role="menuitem">
+                                                    Service 1
+                                                </div>
+                                                <div class="py-2 text-sm text-white font-medium" role="menuitem">
+                                                    Service 2
+                                                </div>
+                                                <div class="py-2 text-sm text-white font-medium" role="menuitem">
+                                                    Service 2
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="px-4 py-2 text-sm text-white w-[15vw]" role="menuitem">
+                                                <span class=" font-bold text-green-700">For NGOs</span>
+                                                <div class=" w-[11rem] font-normal border-b border-green-700 mt-2 rounded-2xl mb-2"></div>
+                                                <div class="py-2 text-sm text-white font-medium" role="menuitem">
+                                                    Service 1
+                                                </div>
+                                                <div class="py-2 text-sm text-white font-medium" role="menuitem">
+                                                    Service 1
+                                                </div>
+                                                <div class="py-2 text-sm text-white font-medium" role="menuitem">
+                                                    Service 1
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class=" mx-[10px] pr-[20px]"><a href="form.html">Contact Us</a></li>
+                        <li class=" mx-[10px]"><a href="About Us.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="py-2 flex justify-center">
+                    <div class="w-[10vw] ring-1 flex justify-center hover:text-black text-lime-600 ring-white px-2 py-2 ml-4 rounded-full hover:bg-teal-600">
+                        <button class="font-bold"><a href="Rate List.html">Check Rate list</a></button>
+                    </div>
+                    <div class=" px-2 py-2 ml-4 rounded-full w-[6vw] flex justify-center bg-white hover:bg-teal-600">
+                        <button class="font-normal"><a href="User.html">Sell here</a></button>
+                    </div>
+                </div>
+                
+            </nav>
+        </header>
+    </head>
+    <main class="flex flex-col justify-start items-center mx-5 my-2">
+        <h1 class="text-green-700 opacity-70 text-6xl underline underline-offset-8 decoration-teal-700">About Us</h1>
+        <p class=" text-gray-500 text-xl my-4 mx-4 mt-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius voluptate iste animi magnam quasi reprehenderit necessitatibus veniam autem nobis quas quis, eos voluptas? Fuga, labore deleniti. Reprehenderit iste quam doloremque! Unde doloribus deserunt neque ea animi, obcaecati molestias reiciendis reprehenderit numquam vel quos fuga, sunt provident eaque similique repellendus? Error facere hic delectus, necessitatibus cumque eaque aliquam accusantium quam maiores. A rem blanditiis doloribus nemo ipsum. Suscipit inventore voluptates aliquid repellendus eaque, doloremque illum, aspernatur, minus veritatis culpa deleniti rem. Natus ducimus, itaque culpa harum deleniti fugit nemo totam atque eaque ea maiores, error id explicabo necessitatibus optio pariatur quibusdam vel minima vitae quo temporibus impedit. Alias enim eaque est, ducimus, ratione quas quasi, quo ipsum cumque voluptates et? Commodi aliquid, nemo rerum deserunt veniam, reiciendis nesciunt quod cupiditate fugit laboriosam sapiente aliquam debitis. Repellendus laboriosam minus ducimus aliquid, hic reprehenderit doloribus ipsam dolorem nesciunt delectus quo modi obcaecati optio molestiae ad expedita ullam saepe quod fugit neque possimus quis assumenda distinctio. Delectus architecto aspernatur sunt officia, vel perferendis harum cumque expedita praesentium consectetur! Labore, sed! Repellat aliquid, enim natus expedita rerum nemo fuga saepe, veritatis temporibus eius magni, quis dolorum doloribus incidunt unde tenetur laboriosam? Eius cupiditate aperiam consequatur dignissimos, dolores repellendus ipsam, aspernatur sed voluptatum laudantium at incidunt. Eaque rerum suscipit nam tempora incidunt animi eos architecto molestias, magnam at autem aperiam nisi nobis obcaecati illo. Assumenda quisquam modi nobis aliquid fuga explicabo commodi enim laboriosam aspernatur facere quidem nam quia soluta quibusdam, nostrum earum reiciendis. Rem doloremque quisquam asperiores unde porro culpa nihil possimus aperiam expedita soluta, illo labore nemo totam recusandae iste adipisci sint libero sapiente harum magni! Ut, quasi ducimus id corporis voluptatum aut recusandae non eligendi nobis excepturi beatae reiciendis cupiditate ad incidunt minima officiis, ab illo iusto quibusdam? Quaerat illum quisquam velit corrupti sapiente laudantium ab culpa obcaecati, sequi quis impedit laborum quam, quidem ipsa est ullam odit magnam necessitatibus sit, nam inventore. Optio deserunt, consequuntur placeat iste officiis eligendi? Ipsam eius delectus voluptas! Aspernatur, numquam exercitationem nisi explicabo aut neque eveniet, quibusdam in ducimus ab odit id similique eius fugit doloribus iste voluptatibus quos architecto? Maiores alias qui beatae quis repellendus voluptatibus quod esse nihil, ratione minima vel! Ipsam laudantium voluptate officiis illo expedita facilis numquam velit sint provident exercitationem consectetur, ex deleniti. Rem animi autem expedita eligendi esse. Rerum praesentium commodi obcaecati facilis! Deleniti eius dicta vero, illum amet atque nulla culpa enim at rerum harum numquam vitae maiores quia cumque minima soluta dolorum delectus vel necessitatibus, impedit accusamus neque. Explicabo ab id, dignissimos incidunt ea nostrum maxime sint repellat obcaecati, nihil magni quis totam rem! Ratione tempore saepe sapiente consequatur itaque dolorum quibusdam voluptatibus neque ipsa eveniet voluptate eius vitae culpa placeat debitis porro, doloremque reprehenderit atque consequuntur laborum ad dolore? Voluptas nam harum laboriosam dicta consequuntur? Eum nemo, ullam esse tenetur, fugiat quia, totam officiis labore unde porro numquam sequi eaque culpa dignissimos exercitationem veniam magni perferendis suscipit veritatis perspiciatis reprehenderit animi provident nam. Minima ea officiis beatae suscipit?</p>
+    </main>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="shortcut icon" href="Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <title>Textile Truce</title>
+</head>
+<!-- <body class="min-h-screen overflow-hidden bg-gradient-to-br from-slate-700 via-gray-500 to-zinc-800"> -->
+<body class="bg-black">    
+    <!-- Loading animation -->
+    <div x-data="{ showLoading: true }" x-init="setTimeout(() => showLoading = false, 1500)"
+        class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-white bg-opacity-80 z-50"
+        x-show="showLoading">
+        <div class="flex justify-center items-center animate-spin rounded-full h-20 w-20 border-t-2 border-b-2 border-green-500">
+        </div>
+        <img class="absolute rounded-full h-14 w-14" src="Logo.png" alt="">
+    </div>
+    <!-- header section starts -->
+    <head>
+        <header>
+            <nav class="flex justify-between items-center w-full h-14 px-[1.2rem] bg-black">
+                <div class="text-2xl font-bold text-lime-600"><a class="flex justify-center items-center" href="index.html"><img class="mr-2 h-[5vh] w-[3vw]" src="Logo.png" alt=""><span class="text-3xl">Textile Truce</span></a></div>
+                <div>
+                    <ul class="flex justify-between items-center text-lime-600 font-semibold">
+                        <li class=" mx-[5px]">
+                            <div x-data="{ open: false }" class="relative">
+                                <button @click="open = !open" class="px-6 py-2 rounded">Services<i class="fa-solid fa-chevron-down text-sm ml-1"></i></button>
+                                <div x-show="open" class="absolute mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                                    <div class="mt-4 ring-white ring-1 py-1 absolute rounded bg-black filter z-10" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                                        <div class="flex justify-center"> 
+                                            <div class="px-4 py-2 text-sm text-white w-[15vw]" role="menuitem">
+                                                <a class=" font-bold text-green-700" href="User.html">For Individuals</a>
+                                                <div class=" w-[11rem] font-normal border-b border-green-700 mt-2 rounded-2xl mb-2"></div>
+                                                <div class="py-2 text-sm text-white font-medium" role="menuitem">
+                                                    Waste Collection
+                                                </div>
+                                                <div class="py-2 text-sm text-white font-medium" role="menuitem">
+                                                    Exciting Rewards
+                                                </div>
+                                                <div class="py-2 text-sm text-white font-medium" role="menuitem">
+                                                    Contribute to Nature
+                                                </div>
+    
+                                            </div>
+                                           
+                                            <div class="px-4 py-2 text-sm text-white w-[15vw]" role="menuitem">
+                                                <span class=" font-bold text-green-700">For Businesses</span>
+                                                <div class=" w-[11rem] font-normal border-b border-green-700 mt-2 rounded-2xl mb-2"></div>
+                                                <div class="py-2 text-sm text-white font-medium" role="menuitem">
+                                                    Business Growth
+                                                </div>
+                                                <div class="py-2 text-sm text-white font-medium" role="menuitem">
+                                                    Circular Economy Services
+                                                </div>
+                                                <div class="py-2 text-sm text-white font-medium" role="menuitem">
+                                                    Textile Industrial Waste
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="px-4 py-2 text-sm text-white w-[15vw]" role="menuitem">
+                                                <span class=" font-bold text-green-700">For NGOs</span>
+                                                <div class=" w-[11rem] font-normal border-b border-green-700 mt-2 rounded-2xl mb-2"></div>
+                                                <div class="py-2 text-sm text-white font-medium" role="menuitem">
+                                                    Zero Waste Services
+                                                </div>
+                                                <div class="py-2 text-sm text-white font-medium" role="menuitem">
+                                                    Employment Oppurtunities
+                                                </div>
+                                                <div class="py-2 text-sm text-white font-medium" role="menuitem">
+                                                    Public Awareness
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class=" mx-[10px] pr-[20px]"><a href="#contact">Contact Us</a></li>
+                        <li class=" mx-[10px]"><a href="About Us.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="py-2 flex justify-center">
+                    <div class="w-[10vw] ring-1 flex justify-center hover:text-black text-lime-600 ring-white px-2 py-2 ml-4 rounded-full hover:bg-teal-600">
+                        <button class="font-bold"><a href="Rate List.html">Check Rate list</a></button>
+                    </div>
+                    <div class=" px-2 py-2 ml-4 rounded-full w-[6vw] flex justify-center bg-white hover:bg-teal-600">
+                        <button class="font-bold"><a href="User.html">Sell here</a></button>
+                    </div>
+                </div>
+                
+            </nav>
+        </header>
+        
+    </head>
+    
+<main>
+<section class="pt-2">
+     <!-- Hero Section -->
+    <div class="w-full h-screen mx-auto pt-3 mb-4">
+        <div class="relative">
+            <img src="Textile Waste.jpg" alt="Background image" class="absolute inset-0 object-cover w-full h-screen filter blur-sm" />
+            <div class="relative z-10 p-8">
+                <div class=" w-100 h-screen flex flex-col justify-center items-center">
+                    <h1 class="text-8xl font-bold text-white">Got <span class=" bg-green-500">Waste?</span></h1>
+                    <p class=" text-8xl font-bold text-white">Let's make it BEST</p>
+                    <p class="text-xl font-semibold mt-4 text-white">Sell us your recyclable wastes and help contribute to the circular economy.</p>
+                    <div class=" mt-6">
+                        <button class="bg-teal-600 hover:bg-green-400 text-black font-semibold ml-7 py-3 px-5 rounded-lg text-2xl"><a href="User.html">For Individuals</a></button>
+                        <button class="bg-teal-600 hover:bg-green-400 text-black font-semibold ml-7 py-3 px-5 rounded-lg text-2xl"><a href="Business.html">For Businesses</a></button>
+                        <button class="bg-teal-600 hover:bg-green-400 text-black font-semibold ml-7 py-3 px-5 rounded-lg text-2xl mr-10"><a href="NGO.html">For NGOs</a></button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    <br>
+    
+    </section>
+</main>
+
+<!-- Image card here -->
+<section>
+    <!-- Individual card -->
+    <div class="flex flex-col items-center justify-center mt-6">
+        <div class="grid grid-cols-9 bg-gray-800 text-white rounded-lg h-[300px] object-fill w-[60vw]">
+        <div class="col-span-3 rounded-l-lg bg-cover" style="background-image: url('index-sec3/Individual pic.webp');">
+        </div>
+        <div class="col-span-6">
+            <p class="text-white text-sm opacity-50 pl-7 pt-14">Empowering</p>
+            <h3 class="text-[50px] font-bold text-[rgb(49,130,22)] pl-[1.6rem]">Individuals</h3>
+            <p class=" text-gray-400 pr-10 pl-[1.6rem] text-lg">by providing safe disposal ways to ensure healthy environment & sustainable living.</p>
+            <div class=" pt-4 pl-[1.6rem]">
+                <a href="User.html"><span class="text-white">Learn More</span><i class="fa-solid fa-arrow-right text-sm text-white ml-1"></i></a>
+            </div>
+        </div>
+        </div>
+        <div class="grid grid-cols-9 bg-gray-800 text-white rounded-lg h-[300px] object-fill w-[60vw] mt-8">
+            <div class="col-span-6 flex flex-col items-start">
+                <p class="text-white opacity-50 pl-10 pr-7 pt-14">Enabling</p>
+                <h3 class="text-[50px] font-bold text-[rgb(49,130,22)] pl-10 pr-[1.6rem]">Businesses</h3>
+                <p class=" text-gray-400 pr-[1.6rem] text-lg pl-10">by providing safe disposal ways to ensure healthy environment & sustainable living.</p>
+                <div class="pl-10 pt-4 pr-[1.6rem]">
+                <a href="Business.html"><span class="text-white">Learn More</span><i class="fa-solid fa-arrow-right text-sm text-white ml-1"></i></a>
+                </div>
+            </div>
+            <div class="col-span-3 rounded-r-lg bg-cover" style="background-image: url('index-sec3/2.jpg');">
+            </div>
+        </div>
+        <div class="grid grid-cols-9 bg-gray-800 text-white rounded-lg h-[300px] object-fill w-[60vw] mt-8">
+            <div class="col-span-3 rounded-l-lg bg-cover" style="background-image: url('index-sec3/3.jpg');">
+            </div>
+            <div class="col-span-6">
+                <p class="text-white opacity-50 pl-7 pt-14">Strengthing</p>
+                <h3 class="text-[50px] font-bold text-[rgb(49,130,22)] pl-[1.6rem]">NGOs</h3>
+                <p class=" text-gray-400 pr-10 pl-[1.6rem] text-lg">by providing safe disposal ways to ensure healthy environment & sustainable living.</p>
+            <div class=" pt-4 pl-[1.6rem]">
+                <a href="NGO.html"><span class="text-white">Learn More</span><i class="fa-solid fa-arrow-right text-sm text-white ml-1"></i></a>
+            </div>
+            </div>
+        </div>
+    </div>
+        
+</section>
+
+<!-- Another card goes here -->
+<div class="mb-4 pl-16 h-[80vh] bg-black text-white w-full object-fill">
+    <img src="Extra-sec.png" alt="">
+</div>
+
+<section class="pt-32 flex flex-col justify-center items-center mt-8">
+    <h1 class="text-white font-bold text-7xl">Our Services</h1>
+    <span class="text-white text-xl font-normal mt-2 opacity-65">Attaining <span class="text-green-600">sustainable solutions</span>with ease</span>
+    <div class=" w-[15vw] bg-green-700 text-black text-sm flex justify-center items-center mt-3 rounded-md p-2 cursor-pointer" id="allButton"><i class="fa-solid fa-bars text-black text-lg font-extrabold rounded-xl"></i><button class="ml-2 text-xl font-bold">All Services</button></div>
+    <div class="flex justify-center items-center mr-4">
+        <div class=" w-[15vw] bg-gray-700 text-white text-sm flex justify-center items-center mt-3 rounded-md p-2 cursor-pointer" id="individualButton"><i class="fa-solid fa-user text-black text-lg focus-within:text-black font-extrabold"></i><button class="ml-2 text-xl font-bold">For Individuals</button></div>
+        <div class=" w-[15vw] bg-gray-700 text-white text-sm flex justify-center items-center mt-3 rounded-md p-2 ml-4 cursor-pointer" id="businessButton"><i class="fa-solid fa-industry text-black text-lg focus-within:text-black font-extrabold"></i><button class="ml-2 text-xl font-bold">For Businesses</button></div>
+        <div class=" w-[15vw] bg-gray-700 text-white text-sm flex justify-center items-center mt-3 rounded-md p-2 ml-4 cursor-pointer" id="ngoButton"><i class="fa-solid fa-building-ngo text-black text-lg focus-within:text-black font-extrabold"></i><button class="ml-2 text-xl font-bold">For NGOs</button></div>
+    </div>
+    <div class="grid grid-cols-3 gap-7 mt-6">
+        <div class="flex flex-col justify-center items-center col-span-1" id="column1">
+            <div class="w-[30vw] h-[16vh] rounded-lg bg-gray-800 my-3 p-5">
+                <div class="flex justify-between items-center">
+                    <div class=" w-[8vw] h-[8vh]"><img src="Services Icons/Waste collection.png" alt=""></div>
+                    <div class="flex flex-col justify-center items-start ml-6">
+                        <h1 class="text-xl text-white opacity-70">Waste Collection</h1>
+                        <p class="text-zinc-500">Digitised solution for the door-to-door free pickup of 40+ recyclables</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[30vw] h-[16vh] rounded-lg bg-gray-800 my-3 p-5">
+                <div class="flex justify-between items-center">
+                    <div class=" w-[8vw] h-[8vh]"><img src="Services Icons/Earn Rewards.png" alt=""></div>
+                    <div class="flex flex-col justify-center items-start">
+                        <h1 class="text-xl text-white opacity-70">Earn Rewards</h1>
+                        <p class="text-zinc-500">Opportunity to earn cashback and exciting rewards</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[30vw] h-[16vh] rounded-lg bg-gray-800 my-3 p-5">
+                <div class="flex justify-between items-center">
+                    <div class=" w-[12vw] h-[8vh]"><img src="Services Icons/An ode to nature.png" alt=""></div>
+                    <div class="flex flex-col justify-center items-start ml-3">
+                        <h1 class="text-xl text-white opacity-70">Contribute to Nature</h1>
+                        <p class="text-zinc-500">Contribution towards conserving resources and reducing the environmental impact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col justify-center items-center col-span-1" id="column2">
+            <div class="w-[30vw] h-[16vh] rounded-lg bg-gray-800 my-3 p-5">
+                <div class="flex justify-between items-center">
+                    <div class=" w-[8vw] h-[8vh]"><img src="Services Icons/Textile industrial Waste.png" alt=""></div>
+                    <div class="flex flex-col justify-center items-start ml-6">
+                        <h1 class="text-xl text-white opacity-70">Textile Industrial Waste</h1>
+                        <p class="text-zinc-500">Provision of proper disposal of the bulk amount of textile waste generated</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[30vw] h-[16vh] rounded-lg bg-gray-800 my-3 p-5">
+                <div class="flex justify-between items-center">
+                    <div class=" w-[8vw] h-[8vh]"><img src="Services Icons/Business Growth.png" alt=""></div>
+                    <div class="flex flex-col justify-center items-start ml-6">
+                        <h1 class="text-xl text-white opacity-70">Business Growth</h1>
+                        <p class="text-zinc-500">Providing business with opportunities to grow among others in industry</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[30vw] h-[16vh] rounded-lg bg-gray-800 my-3 p-5">
+                <div class="flex justify-between items-center">
+                    <div class=" w-[8vw] h-[8vh]"><img src="Services Icons/Circular Economy Service.png" alt=""></div>
+                    <div class="flex flex-col justify-center items-start ml-6">
+                        <h1 class="text-xl text-white opacity-70">Circular Economy Service</h1>
+                        <p class="text-zinc-500">Digitised solution for the door-to-door free pickup of 40+ recyclables</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col justify-center items-center col-span-1" id="column3">
+            <div class="w-[30vw] h-[16vh] rounded-lg bg-gray-800 my-3 p-5">
+                <div class="flex justify-between items-center">
+                    <div class=" w-[8vw] h-[8vh] scale-90"><img src="Services Icons/Zero waste services.png" alt=""></div>
+                    <div class="flex flex-col justify-center items-start">
+                        <h1 class="text-xl text-white opacity-70">Zero Waste Services</h1>
+                        <p class="text-zinc-500">Ensuring the implementation of zero waste ideology
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[30vw] h-[16vh] rounded-lg bg-gray-800 my-3 p-5">
+                <div class="flex justify-between items-center">
+                    <div class=" w-[8vw] h-[8vh] scale-125 ml-3"><img src="Services Icons/Job opportunities.png" alt=""></div>
+                    <div class="flex flex-col justify-center items-start ml-8">
+                        <h1 class="text-xl text-white opacity-70">Employment Oppurtunities</h1>
+                        <p class="text-zinc-500">Creating employment opportunities by supporting industries involved in recycling and upcycling</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[30vw] h-[16vh] rounded-lg bg-gray-800 my-3 p-5">
+                <div class="flex justify-between items-center">
+                    <div class=" w-[8vw] h-[8vh]"><img src="Services Icons/Public Awareness.png" alt=""></div>
+                    <div class="flex flex-col justify-center items-start ml-6">
+                        <h1 class="text-xl text-white opacity-70">Public Awareness</h1>
+                        <p class="text-zinc-500">Promoting the current demand of a sustainable alternative to fast fashion</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const individualButton = document.getElementById("individualButton");
+            const businessButton = document.getElementById("businessButton");
+            const ngoButton = document.getElementById("ngoButton");
+            const AllButton = document.getElementById("allButton")
+            const column1 = document.getElementById("column1");
+            const column2 = document.getElementById("column2");
+            const column3 = document.getElementById("column3");
+    
+            individualButton.addEventListener("click", function() {
+                column2.style.display = "none";
+                column3.style.display = "none";
+                column1.style.display = "block"; 
+                AllButton.style.backgroundColor = "rgb(55,65,81)";
+                AllButton.style.color = "white";
+                individualButton.style.backgroundColor = "rgb(21,128,61)";
+                individualButton.style.color = "black";
+                businessButton.style.backgroundColor = "rgb(55,65,81)";
+                businessButton.style.color = "white";
+                ngoButton.style.backgroundColor = "rgb(55,65,81)";
+                ngoButton.style.color = "white";
+
+            });
+    
+            businessButton.addEventListener("click", function() {
+                column1.style.display = "none";
+                column3.style.display = "none";
+                column2.style.display = "block";
+                AllButton.style.backgroundColor = "rgb(55,65,81)";
+                AllButton.style.color = "white";
+                businessButton.style.backgroundColor = "rgb(21,128,61)";
+                businessButton.style.color = "black";
+                individualButton.style.backgroundColor = "rgb(55,65,81)";
+                individualButton.style.color = "white";
+                ngoButton.style.backgroundColor = "rgb(55,65,81)";
+                ngoButton.style.color = "white";
+            });
+    
+            ngoButton.addEventListener("click", function() {
+                column1.style.display = "none";
+                column2.style.display = "none";
+                column3.style.display = "block";
+                AllButton.style.backgroundColor = "rgb(55,65,81)";
+                AllButton.style.color = "white";
+                ngoButton.style.backgroundColor = "rgb(21,128,61)";
+                ngoButton.style.color = "rgb(black)";
+                businessButton.style.backgroundColor = "rgb(55,65,81)";
+                businessButton.style.color = "white";
+                individualButton.style.backgroundColor = "rgb(55,65,81)";
+                individualButton.style.color = "white";
+            });
+
+            AllButton.addEventListener("click", function() {
+                column2.style.display = "block";
+                column3.style.display = "block";
+                column1.style.display = "block";
+                AllButton.style.backgroundColor = "rgb(21,128,61)";
+                AllButton.style.color = "black";
+                businessButton.style.backgroundColor = "rgb(55,65,81)";
+                businessButton.style.color = "white";
+                ngoButton.style.backgroundColor = "rgb(55,65,81)";
+                ngoButton.style.color = "white";
+                individualButton.style.backgroundColor = "rgb(55,65,81)";
+                individualButton.style.color = "white";
+            });
+        });
+    </script>
+    
+    
+</section>
+<footer class="bg-black mt-4">
+    <main>
+        <div class="flex flex-col items-center justify-center h-screen" id="contact">
+            <h1 class="text-[55px] font-bold text-white">Get in touch with us</h1>
+            <p class="text-white text-xl opacity-50">Any question or remarks? Just write us a <span class="text-[rgb(49,130,22)]">message!</span></p>
+            <div class="bg-gray-800 mt-12 h-[70vh] w-[80vw] rounded-lg flex items-center justify-center">
+                <div class="bg-green-200 text-black h-[63vh] w-[30vw] rounded-xl flex flex-col items-start justify-start ml-6 shadow-black shadow-2xl">
+                    <div class="ml-14 mr-20">
+                    <h1 class="font-bold text-3xl mt-12">Contact Information</h1>
+                    <p class="mt-2 text-[1.125rem]">Fill up the form and our Team will get back to you within 24 hours</p>
+                    <div class=" mt-9 flex items-end"><i class="fa-solid fa-phone-volume text-xl"></i><span class=" ml-4 text-[1.1rem] font-semibold">+91-6203xxx224</span></div>
+                    <div class=" mt-9 flex items-end"><i class="fa-regular fa-envelope text-xl"></i><span class=" ml-4 text-[1.1rem] font-semibold text-center">contact@textiletruce.com</span></div>
+                    <div class=" mt-9 flex justify-start"><i class="fa-solid fa-location-dot text-xl"></i><span class=" ml-4 text-[1.1rem] font-semibold">LNCT Group of Colleges, Kalchuri Nagar, Raisen Road</span></div>
+                    </div>
+                </div>
+                    
+                <div class="text-white h-[63vh] w-[45vw] rounded-lg flex flex-col items-start justify-start ml-20">
+                        <form>
+                          <label for="name" class="text-[1rem] opacity-70 font-light">Name</label><br>
+                          <input class="ring-white ring-1 w-[40vw] h-[6vh] rounded-md bg-gray-800 ml-1 mt-2 p-4" placeholder="Name" type="text" id="name" name="name" required><br>
+                          <div class="flex mt-6">
+                            <div class="mr-16">
+                                <label for="phoneNumber" class="text-[1rem] opacity-70 font-light">Phone Number</label><br>
+                                <input class="ring-white ring-1 w-[18vw] h-[6vh] rounded-md bg-gray-800 ml-1 mt-2 p-4" placeholder="Phone Number" type="tel" id="phoneNumber" name="phoneNumber" required>
+                            </div>
+                            <div>
+                                <label for="emailAddress" class="text-[1rem] opacity-70 font-light">Email Address</label><br>
+                                <input class="ring-white ring-1 w-[17.5vw] h-[6vh] rounded-md bg-gray-800 ml-1 mt-2 p-4" placeholder="Email Address" type="email" id="emailAddress" name="emailAddress" required><br>
+                            </div>
+                            
+                          </div>
+                          <div class=" mt-6">
+                            <label for="subject" class="text-[1rem] opacity-70 font-light">Subject</label><br>
+                            <input class="ring-white ring-1 w-[40vw] h-[6vh] rounded-md bg-gray-800 ml-1 mt-2 p-4" placeholder="Subject" type="text" id="subject" name="subject" required><br>
+                          </div>
+                         
+                          <div class="mt-6">
+                            <label for="message" class="text-[1rem] opacity-70 font-light">Message</label><br>
+                            <textarea class="ring-white ring-1 w-[40vw] h-[14vh] rounded-md bg-gray-800 ml-1 mt-2 p-4 overflow-hidden" placeholder="Subject" id="message" name="message" required></textarea><br>
+                          </div>
+                          <div class=" relative">
+                            <div class=" bg-green-700 rounded-lg w-[10vw] h-[5vh] mt-3 flex justify-center items-center absolute right-0">
+                                <button class="text-black">Send Message</button>
+                              </div>
+                          </div>
+                          
+                        </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="w-full bg-gray-900 px-4 text-white pt-8 flex justify-between">
+            <div class="mr-3">
+                <p class="text-white font-bold text-[1rem] md:text-2xl">Get to Know US</p>
+                <div class="w-[11rem] font-bold border-b-2 md:border-b-4 border-green-700 mt-1 rounded-2xl mb-2"></div>
+            <ul>
+                <li class=" hover:underline"><a href="About Us.html">About Us</a></li>
+                <li class=" hover:underline"><a href="https://drive.google.com/file/d/1tGpxS0J7nC9PXIYi21e2xvKT0H0644qM/view?usp=sharing">Our Agenda</a></li>
+                <li class=" hover:underline"><a href="#">Our Plans</a></li>
+            </ul>
+            </div>
+            <div class="mr-3 flex flex-col justify-center items-center">
+                <div class="flex justify-between items-center">
+                <img class="h-[50px] w-[50px]" src="Logo.png" alt="">
+                <span class="text-green-800 text-[50px] font-bold">Textile Truce</span>
+                </div>
+
+                <div class="flex justify-center items-center">
+                    <i class="fa-solid fa-location-dot text-xl mr-1"></i>
+                    <p>LNCT Group of Colleges, Kalchuri Nagar, Raisen Road</p>
+                </div>
+                <hr class=" text-white">
+                <div class=" mt-6">
+                    <p>&#169;Just Woods team</p>
+                </div>
+                <div>
+                    Made in INDIA with <i class="fa-solid fa-heart text-xl hover:scale-125 text-red-500"></i>
+                </div>
+            </div>
+            <div class="my-3 pr-8">
+                <p class=" text-white font-bold text-[1rem] md:text-2xl">LINKS</p>
+                <div class=" w-[5rem] font-bold border-b-2 md:border-b-4 border-green-700 mt-1 rounded-2xl mb-2"></div>
+            <ul>
+                <li class=" hover:text-red-600"><i class="fa-brands fa-youtube mr-1"></i><a href="#" class=" hover:text-red-600">Youtube</a></li>
+                <li class=" hover:text-blue-600"><i class="fa-brands fa-facebook mr-1"></i><a href="#" class=" hover:text-blue-600">Facebook</a></li>
+                <li class="hover:bg-gradient-to-r hover:font-medium hover:bg-clip-text hover:text-transparent from-purple-600 via-pink-600 to-blue-600"><i class="fa-brands fa-instagram mr-1 "></i><a href="#" class=" hover:bg-gradient-to-r hover:font-medium hover:bg-clip-text hover:text-transparent from-purple-600 via-pink-600 to-blue-600">Instagram</a></li>
+            </ul>
+            </div>
+    </section>
+
+</footer>
+
+</body>
+</html>
